@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>立方体动画</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			height: 100%;
+		}
+		body{
+			background: black;
+			/*background: url(img/b1.jpg) no-repeat;*/
+			/*background: url(img/a5.gif) no-repeat;*/
+			/*background-size: 100%;*/
+			display:flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.aa{
+			width: 200px;
+			height: 200px;
+			position: relative;
+			transform-style: preserve-3d;
+			transform: rotateX(-10deg) rotateY(10deg);
+			animation: lft 8s infinite linear;
+		}
+		.aa:hover{
+			animation: lft 8s infinite linear/* paused*/;
+		}
+		.aa a{
+			display: block;
+			transform-style: preserve-3d;
+			/*opacity: .5;*/
+		}
+		.aa .a1{
+			width: 200px;
+			height: 200px;
+			background: #c9c815;
+			border:1px solid #d9d2d0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border:1px solid #d9d2d0;
+			opacity: .6;
+		}
+		.aa .a1 img{
+			width: 200px;
+			height: 200px;
+			box-shadow: 5px 5px 30px #a500ff;
+		}
+		.aa .a2 img{
+			width: 100px;
+			height: 100px;
+			box-shadow: 5px 5px 20px #ff0000;
+		}
+		.aa:hover .a2{
+			box-shadow: 5px 5px 100px #ff0000;
+		}
+		.aa:hover .a1{
+			box-shadow: 5px 5px 100px #a500ff;
+		}
+		/*body:hover {
+			background: url(img/a1.gif) no-repeat;
+			background-size: 100%;
+		}*/
+		.aa .a2{
+			width: 100px;
+			height: 100px;
+			background: #fd8c0a;
+			border:1px solid #d9d2d0;
+			position: absolute;
+			left: 50px;
+			top: 50px;
+		}
+		.aa a:nth-child(1){
+			transform: translateZ(100px);
+		}
+		.aa a:nth-child(2){
+			transform: translateZ(-100px);
+		}
+		.aa a:nth-child(3){
+			transform: rotateY(-90deg) translateZ(100px);
+		}
+		.aa a:nth-child(4){
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.aa a:nth-child(5){
+			transform: rotateX(-90deg) translateZ(100px);
+		}
+		.aa a:nth-child(6){
+			transform: rotateX(90deg) translateZ(100px);
+		}
+
+		.aa:hover a:nth-child(1){
+			transform: translateZ(150px);
+		}
+		.aa:hover a:nth-child(2){
+			transform: translateZ(-150px);
+		}
+		.aa:hover a:nth-child(3){
+			transform: rotateY(-90deg) translateZ(150px);
+		}
+		.aa:hover a:nth-child(4){
+			transform: rotateY(90deg) translateZ(150px);
+		}
+		.aa:hover a:nth-child(5){
+			transform: rotateX(-90deg) translateZ(150px);
+		}
+		.aa:hover a:nth-child(6){
+			transform: rotateX(90deg) translateZ(150px);
+		}
+
+		.aa a:nth-child(7){
+			transform: translateZ(50px);
+		}
+		.aa a:nth-child(8){
+			transform: translateZ(-50px);
+		}
+		.aa a:nth-child(9){
+			transform: rotateY(-90deg) translateZ(50px);
+		}
+		.aa a:nth-child(10){
+			transform: rotateY(90deg) translateZ(50px);
+		}
+		.aa a:nth-child(11){
+			transform: rotateX(-90deg) translateZ(50px);
+		}
+		.aa a:nth-child(12){
+			transform: rotateX(90deg) translateZ(50px);
+		}
+		@keyframes lft{
+			0%{
+				transform: rotateX(0deg) rotateY(0deg);
+			}
+			100%{
+				transform: rotateX(360deg) rotateY(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="aa">
+		<a href="#" class="a1"><img src="img/a1.jpg" alt=""></a>
+		<a href="#" class="a1"><img src="img/a1.jpg" alt=""></a>
+		<a href="#" class="a1"><img src="img/a1.jpg" alt=""></a>
+		<a href="#" class="a1"><img src="img/a1.jpg" alt=""></a>
+		<a href="#" class="a1"><img src="img/a1.jpg" alt=""></a>
+		<a href="#" class="a1"><img src="img/a1.jpg" alt=""></a>
+		<a href="#" class="a2"><img src="img/aa.jpg" alt=""></a>
+		<a href="#" class="a2"><img src="img/aa.jpg" alt=""></a>
+		<a href="#" class="a2"><img src="img/aa.jpg" alt=""></a>
+		<a href="#" class="a2"><img src="img/aa.jpg" alt=""></a>
+		<a href="#" class="a2"><img src="img/aa.jpg" alt=""></a>
+		<a href="#" class="a2"><img src="img/aa.jpg" alt=""></a>
+	</div>
+</body>
+</html>
